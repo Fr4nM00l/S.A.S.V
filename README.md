@@ -1,18 +1,17 @@
 # 🇦🇷 Mapa Interactivo de Argentina - Análisis de Muertes Viales
 
-## 📋 Descripción del Proyecto
 
-Este proyecto presenta una aplicación web interactiva desarrollada con **Streamlit** que permite visualizar y analizar datos de muertes viales en Argentina por provincia. La aplicación incluye un mapa interactivo, estadísticas detalladas y herramientas de análisis comparativo.
+Este proyecto presenta una aplicación web interactiva desarrollada con Streamlit que permite visualizar y analizar datos de muertes viales en Argentina por provincia. La aplicación incluye un mapa interactivo, estadísticas detalladas y herramientas de análisis comparativo.
 
-## 🚀 Características Principales
+## Caracteristicas Actuales
 
-- **🗺️ Mapa Interactivo**: Visualización geográfica de muertes viales por provincia
-- **📊 Estadísticas Detalladas**: Análisis específico por provincia con gráficos temporales
-- **📈 Análisis Comparativo**: Comparación entre provincias argentinas
-- **🔍 Explorador de Datos**: Filtros avanzados y descarga de datos
-- **📱 Interfaz Responsiva**: Diseño moderno y fácil de usar
+- ** Mapa Interactivo**: Visualización geográfica de muertes viales por provincia
+- ** Estadísticas Detalladas**: Análisis específico por provincia con gráficos temporales
+- ** Análisis Comparativo**: Comparación entre provincias argentinas
+- ** Explorador de Datos**: Filtros avanzados y descarga de datos
+- ** Interfaz Responsiva**: Diseño moderno y fácil de usar
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías
 
 - **Python 3.8+**
 - **Streamlit** - Framework web
@@ -21,31 +20,20 @@ Este proyecto presenta una aplicación web interactiva desarrollada con **Stream
 - **Folium** - Mapas interactivos
 - **NumPy** - Cálculos numéricos
 
-## 📦 Instalación
+## Instalación
 
-### Prerrequisitos
+### requisitos
 - Python 3.8 o superior
 - pip (gestor de paquetes de Python)
 
-### Pasos de Instalación
+### IMPORTANTEEEEE
 
-1. **Clonar el repositorio:**
-```bash
-git clone https://github.com/Fr4nM00l/S.A.S.V.git
-cd S.A.S.V
-```
-
-2. **Instalar dependencias:**
+Antes que nada, deben **Instalar dependencias:**
 ```bash
 pip install -r requirements.txt
 ```
 
-3. **Ejecutar la aplicación:**
-```bash
-streamlit run mapa_argentina_interactivo.py
-```
-
-## 📊 Estructura de Datos
+## Estructura de Datos
 
 El proyecto utiliza el archivo `MUERTES_VIALES.csv` que contiene:
 - **provincia_nombre**: Nombre de la provincia
@@ -55,8 +43,9 @@ El proyecto utiliza el archivo `MUERTES_VIALES.csv` que contiene:
 - **victima_tr_edad**: Edad de la víctima
 - **latitud/longitud**: Coordenadas geográficas
 - **id_hecho**: Identificador único del incidente
+- **Y muchos mas datos interesantes**
 
-## 🎯 Funcionalidades
+## Funciones
 
 ### 1. Mapa Interactivo
 - Visualización geográfica de todas las provincias argentinas
@@ -79,7 +68,7 @@ El proyecto utiliza el archivo `MUERTES_VIALES.csv` que contiene:
 - Vista de datos filtrados
 - Descarga de datos en formato CSV
 
-## 🎨 Características del Diseño
+## Características del Diseño
 
 - **Interfaz moderna** con gradientes y colores atractivos
 - **Responsive design** que se adapta a diferentes tamaños de pantalla
@@ -87,7 +76,7 @@ El proyecto utiliza el archivo `MUERTES_VIALES.csv` que contiene:
 - **Gráficos interactivos** con Plotly
 - **Mapas interactivos** con Folium
 
-## 📈 Uso de la Aplicación
+## Uso de la Aplicación
 
 1. **Selecciona una opción** en el panel de control lateral
 2. **Explora el mapa** haciendo clic en las provincias
@@ -95,7 +84,7 @@ El proyecto utiliza el archivo `MUERTES_VIALES.csv` que contiene:
 4. **Compara provincias** en el análisis comparativo
 5. **Filtra y descarga** datos según tus necesidades
 
-## 🔧 Configuración
+## Configuración
 
 ### Variables de Entorno
 No se requieren variables de entorno adicionales.
@@ -106,13 +95,13 @@ Puedes modificar:
 - Estilos CSS en los `st.markdown()`
 - Configuración de gráficos en las funciones de Plotly
 
-## 📝 Notas Técnicas
+## Notas Técnicas
 
 - **Caché de datos**: Los datos se cargan una vez y se almacenan en caché
 - **Optimización**: Procesamiento eficiente de grandes volúmenes de datos
 - **Compatibilidad**: Funciona en Windows, macOS y Linux
 
-## 🤝 Contribuciones
+## Contribuciones
 
 Las contribuciones son bienvenidas. Para contribuir:
 
@@ -122,20 +111,12 @@ Las contribuciones son bienvenidas. Para contribuir:
 4. Push a la rama (`git push origin feature/AmazingFeature`)
 5. Abre un Pull Request
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
 
-## 👨‍💻 Autor
+## Autor
 
 **FranM00l** - [GitHub](https://github.com/Fr4nM00l)
 
-## 🙏 Agradecimientos
 
-- Datos proporcionados por fuentes oficiales argentinas
-- Comunidad de Streamlit por el excelente framework
-- Contribuidores de las librerías utilizadas
-
----
-
-⭐ **¡Si te gusta este proyecto, dale una estrella en GitHub!**
