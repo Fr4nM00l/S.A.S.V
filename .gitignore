@@ -56,7 +56,7 @@ test_*.py
 *_test.py
 corregir_rutas.py
 iniciar_mapa_*.py
-INICIAR_MAPA.bat
+# INICIAR_MAPA.bat  # Comentado para incluir los nuevos archivos .bat
 
 # Documentación temporal
 CORRECCIONES_*.md

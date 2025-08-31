@@ -27,8 +27,37 @@ Este proyecto presenta una aplicación web interactiva desarrollada con **Stream
 - Python 3.8 o superior
 - pip (gestor de paquetes de Python)
 
+### 🚀 Archivos de Inicio Rápido
+
+El proyecto incluye dos archivos `.bat` para facilitar el inicio:
+
+- **`iniciar_aplicacion.bat`** - Inicio completo con verificaciones automáticas
+  - ✅ Verifica que Python esté instalado
+  - ✅ Verifica que los archivos necesarios existan
+  - ✅ Instala dependencias automáticamente
+  - ✅ Inicia la aplicación
+  - 🔧 Ideal para usuarios principiantes
+
+- **`iniciar_rapido.bat`** - Inicio directo sin verificaciones
+  - ⚡ Inicio inmediato de la aplicación
+  - 🎯 Para usuarios avanzados
+  - ⚠️ Requiere que las dependencias estén instaladas
+
 ### Pasos de Instalación
 
+#### Opción 1: Inicio Automático (Recomendado para Windows)
+1. **Clonar el repositorio:**
+```bash
+git clone https://github.com/Fr4nM00l/S.A.S.V.git
+cd S.A.S.V
+```
+
+2. **Ejecutar el archivo .bat:**
+```bash
+iniciar_aplicacion.bat
+```
+
+#### Opción 2: Inicio Manual
 1. **Clonar el repositorio:**
 ```bash
 git clone https://github.com/Fr4nM00l/S.A.S.V.git
@@ -43,6 +72,11 @@ pip install -r requirements.txt
 3. **Ejecutar la aplicación:**
 ```bash
 streamlit run mapa_argentina_interactivo.py
+```
+
+#### Opción 3: Inicio Rápido (Para usuarios avanzados)
+```bash
+iniciar_rapido.bat
 ```
 
 ## 📊 Estructura de Datos
@@ -105,6 +139,19 @@ Puedes modificar:
 - Colores del mapa en `crear_mapa_argentina_interactivo()`
 - Estilos CSS en los `st.markdown()`
 - Configuración de gráficos en las funciones de Plotly
+
+## 📁 Estructura del Proyecto
+
+```
+S.A.S.V/
+├── 📄 mapa_argentina_interactivo.py    # Aplicación principal
+├── 📄 requirements.txt                  # Dependencias de Python
+├── 📄 MUERTES_VIALES.csv               # Dataset de muertes viales
+├── 📄 README.md                        # Documentación del proyecto
+├── 📄 .gitignore                       # Configuración de Git
+├── 🚀 iniciar_aplicacion.bat           # Inicio automático (Windows)
+└── ⚡ iniciar_rapido.bat               # Inicio rápido (Windows)
+```
 
 ## 📝 Notas Técnicas
 
