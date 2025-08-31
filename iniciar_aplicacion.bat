@@ -10,7 +10,7 @@ echo ========================================
 echo.
 
 echo 🔍 Verificando Python...
-python --version >nul 2>&1
+py --version >nul 2>&1
 if errorlevel 1 (
     echo ❌ ERROR: Python no está instalado o no está en el PATH
     echo.
@@ -52,14 +52,14 @@ echo.
 
 echo 📦 Instalando dependencias...
 echo.
-pip install -r requirements.txt
+py -m pip install -r requirements.txt
 if errorlevel 1 (
     echo.
     echo ❌ ERROR: No se pudieron instalar las dependencias
     echo.
     echo 🔧 Soluciones posibles:
     echo    1. Verifica tu conexión a internet
-    echo    2. Actualiza pip: python -m pip install --upgrade pip
+    echo    2. Actualiza pip: py -m pip install --upgrade pip
     echo    3. Instala las dependencias manualmente
     echo.
     pause
@@ -81,7 +81,7 @@ echo.
 
 echo ⏳ Iniciando Streamlit...
 echo.
-streamlit run mapa_argentina_interactivo.py
+py -m streamlit run mapa_argentina_interactivo.py
 
 echo.
 echo 👋 Aplicación cerrada
