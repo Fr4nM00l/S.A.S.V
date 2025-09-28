@@ -1,190 +1,161 @@
-# 🇦🇷 Mapa Interactivo de Argentina - Análisis de Muertes Viales
+🇦🇷 S.A.S.V - Sistema de Análisis de Siniestros Viales en Argentina
+📋 Descripción del Proyecto
+Este proyecto es una aplicación web interactiva desarrollada con Streamlit para visualizar, analizar y gestionar datos de muertes viales en Argentina.
 
-## 📋 Descripción del Proyecto
+La aplicación ofrece un conjunto completo de herramientas analíticas (mapas, estadísticas, comparativas) y se complementa con un sistema de registro de incidentes que permite a los usuarios añadir nuevos datos de manera normalizada al archivo CSV original.
 
-Este proyecto presenta una aplicación web interactiva desarrollada con **Streamlit** que permite visualizar y analizar datos de muertes viales en Argentina por provincia. La aplicación incluye un mapa interactivo, estadísticas detalladas y herramientas de análisis comparativo.
 
-## 🚀 Características Principales
+🚀 Características Principales:
+___________________________________________________________________________________________________________________________________________________
+                                                                                                                                                  
+🗺️ Mapa Interactivo: Visualización geográfica de muertes viales por provincia.                                                                    
+                                                                                                                                                  
+🔥 Mapa de Calor: Identificación de zonas de alta concentración de siniestros viales.                                                            
 
-- **🗺️ Mapa Interactivo**: Visualización geográfica de muertes viales por provincia
-- **📊 Estadísticas Detalladas**: Análisis específico por provincia con gráficos temporales
-- **📈 Análisis Comparativo**: Comparación entre provincias argentinas
-- **🔍 Explorador de Datos**: Filtros avanzados y descarga de datos
-- **📱 Interfaz Responsiva**: Diseño moderno y fácil de usar
+➕ Registro de Incidentes: Formulario para añadir nuevos registros al archivo de datos CSV, asegurando la consistencia de los campos categóricos.
 
-## 🛠️ Tecnologías Utilizadas
+📊 Análisis Segmentado: Desglose detallado por tipo de vehículo, tipo de lugar y modo de producción del hecho.
 
-- **Python 3.8+**
-- **Streamlit** - Framework web
-- **Pandas** - Manipulación de datos
-- **Plotly** - Gráficos interactivos
-- **Folium** - Mapas interactivos
-- **NumPy** - Cálculos numéricos
+📈 Análisis Comparativo: Comparación de métricas clave entre las provincias argentinas.
 
-## 📦 Instalación
+🔍 Explorador de Datos: Permite filtrar datos por rango de año y provincia para su previsualización y descarga.
 
-### Prerrequisitos
-- Python 3.8 o superior
-- pip (gestor de paquetes de Python)
+📱 Interfaz Responsiva: Diseño moderno y adaptable a diferentes dispositivos.
 
-### 🚀 Archivos de Inicio Rápido
 
-El proyecto incluye dos archivos `.bat` para facilitar el inicio:
+🛠️ Tecnologías Utilizadas
+_______________________________________________________
 
-- **`iniciar_aplicacion.bat`** - Inicio completo con verificaciones automáticas
-  - ✅ Verifica que Python esté instalado
-  - ✅ Verifica que los archivos necesarios existan
-  - ✅ Instala dependencias automáticamente
-  - ✅ Inicia la aplicación
-  - 🔧 Ideal para usuarios principiantes
+Python 3.8+
 
-- **`iniciar_rapido.bat`** - Inicio directo sin verificaciones
-  - ⚡ Inicio inmediato de la aplicación
-  - 🎯 Para usuarios avanzados
-  - ⚠️ Requiere que las dependencias estén instaladas
+Streamlit - Framework web y de interfaz de usuario.
 
-### Pasos de Instalación
+Pandas - Manipulación y gestión de datos.
 
-#### Opción 1: Inicio Automático (Recomendado para Windows)
-1. **Clonar el repositorio:**
-```bash
-git clone https://github.com/Fr4nM00l/S.A.S.V.git
+Plotly - Gráficos interactivos y dinámicos.
+
+Folium - Mapas interactivos geolocalizados.
+
+NumPy - Cálculos numéricos y manejo de valores nulos.
+
+📦 Instalación
+______________________________________________________________________________________________
+
+Prerrequisitos
+Python 3.8 o superior
+
+pip (gestor de paquetes de Python)
+
+Pasos de Instalación
+Opción 1: Inicio Automático (Recomendado para Windows)
+Clonar el repositorio:
+
+git clone [https://github.com/Fr4nM00l/S.A.S.V.git](https://github.com/Fr4nM00l/S.A.S.V.git)
 cd S.A.S.V
-```
 
-2. **Ejecutar el archivo .bat:**
-```bash
+Ejecutar el archivo .bat:
+
 iniciar_aplicacion.bat
-```
 
-#### Opción 2: Inicio Manual
-1. **Clonar el repositorio:**
-```bash
-git clone https://github.com/Fr4nM00l/S.A.S.V.git
-cd S.A.S.V
-```
+Opción 2: Inicio Manual
+- Clonar el repositorio:
 
-2. **Instalar dependencias:**
-```bash
-pip install -r requirements.txt
-```
+git clone [https://github.com/Fr4nM00l/S.A.S.V.git](https://github.com/Fr4nM00l/S.A.S.V.git)
+- cd S.A.S.V
 
-3. **Ejecutar la aplicación:**
-```bash
-streamlit run mapa_argentina_interactivo.py
-```
+Instalar dependencias:
 
-#### Opción 3: Inicio Rápido (Para usuarios avanzados)
-```bash
-iniciar_rapido.bat
-```
+- pip install -r requirements.txt
 
-## 📊 Estructura de Datos
+Ejecutar la aplicación (Punto de entrada principal):
 
-El proyecto utiliza el archivo `MUERTES_VIALES.csv` que contiene:
-- **provincia_nombre**: Nombre de la provincia
-- **localidad_nombre**: Nombre de la localidad
-- **anio**: Año del incidente
-- **mes**: Mes del incidente
-- **victima_tr_edad**: Edad de la víctima
-- **latitud/longitud**: Coordenadas geográficas
-- **id_hecho**: Identificador único del incidente
+streamlit run main.py
 
-## 🎯 Funcionalidades
+____________________________________________________________________________________________________________________________________________________
 
-### 1. Mapa Interactivo
-- Visualización geográfica de todas las provincias argentinas
-- Marcadores de colores según la cantidad de muertes
-- Información detallada al hacer clic en cada provincia
+📊 Estructura de Datos (MUERTES_VIALES.csv)
+El archivo MUERTES_VIALES.csv (delimitado por ;) debe contener todas las columnas para que el registro funcione correctamente. Los campos clave para el análisis y la entrada de datos son:
 
-### 2. Estadísticas por Provincia
-- Métricas principales (total muertes, edad promedio, período)
-- Gráficos de evolución temporal
-- Distribución por meses
-- Top 10 localidades con más muertes
+______________________________________________________________________________________________________________________
+** Campo Clave **             | ** Descripción **                    | ** Formato de Normalización **                 |
+                              |                                      |                                                |
+id_hecho                      | Identificador único del incidente.   | Generado automáticamente.                      |
+                              |                                      |                                                |
+provincia_nombre              | Nombre de la provincia.              | Lista cerrada (normalizada).                   |
+                              |                                      |                                                |
+latitud/longitud              | Coordenadas geográficas.             | Decimal Degrees (DD).                          |
+                              |                                      |                                                |
+fecha_hecho                   | Fecha completa del siniestro.        | Derivado del campo de fecha.                   |
+                              |                                      |                                                |
+victima_tr_edad               | Edad de la víctima.                  | Número entero.                                 |
+                              |                                      |                                                |    
+tipo_lugar                    | Clasificación del lugar.             | Lista cerrada (normalizada).                   |
+                              |                                      |                                                |
+victima/inculpado_vehiculo    | Tipo de vehículo involucrado.        | Lista cerrada (normalizada).                   |
+                              |                                      |                                                |
+modo_produccion_hecho         | Descripción del siniestro.           |Lista cerrada (normalizada).                    |
+______________________________________________________________________________________________________________________|
 
-### 3. Análisis Comparativo
-- Comparación entre todas las provincias
-- Gráficos de barras interactivos
-- Tabla de estadísticas completa
 
-### 4. Explorador de Datos
-- Filtros por año y provincia
-- Vista de datos filtrados
-- Descarga de datos en formato CSV
+🎯 Funcionalidades por Sección
+_________________________________________________________________________________________________________________________________________________
 
-## 🎨 Características del Diseño
+1. Visualización Geográfica (Mapa)
+Presenta un mapa interactivo de Argentina.
 
-- **Interfaz moderna** con gradientes y colores atractivos
-- **Responsive design** que se adapta a diferentes tamaños de pantalla
-- **Navegación intuitiva** con sidebar de control
-- **Gráficos interactivos** con Plotly
-- **Mapas interactivos** con Folium
+Permite alternar entre el Mapa de Coropletas (colores por provincia) y el Mapa de Calor (zonas de alta densidad).
 
-## 📈 Uso de la Aplicación
+2. Estadísticas Detalladas
+Muestra métricas principales (Total Muertes, Edad Promedio).
 
-1. **Selecciona una opción** en el panel de control lateral
-2. **Explora el mapa** haciendo clic en las provincias
-3. **Analiza estadísticas** específicas por provincia
-4. **Compara provincias** en el análisis comparativo
-5. **Filtra y descarga** datos según tus necesidades
+Gráficos de evolución temporal y distribución mensual para la provincia seleccionada.
 
-## 🔧 Configuración
+3. Registro de Nuevo Incidente (NUEVO)
+Formulario de Entrada: Incluye campos mínimos y esenciales para la alta de un nuevo siniestro.
 
-### Variables de Entorno
-No se requieren variables de entorno adicionales.
+Normalización: Utiliza listas desplegables (selectbox) pobladas con los valores únicos ya existentes en el CSV, garantizando que los nuevos registros sean consistentes con los datos históricos.
 
-### Personalización
-Puedes modificar:
-- Colores del mapa en `crear_mapa_argentina_interactivo()`
-- Estilos CSS en los `st.markdown()`
-- Configuración de gráficos en las funciones de Plotly
+Persistencia: El nuevo registro se añade directamente al archivo data/MUERTES_VIALES.csv.
 
-## 📁 Estructura del Proyecto
+4. Análisis Segmentado
+Vehículos: Desglose por victima_vehiculo y inculpado_vehiculo.
 
-```
+Lugar y Modo: Distribución por tipo_lugar (Ruta, Calle) y modo_produccion_hecho (Colisión, Vuelco).
+
+
+📁 Estructura del Proyecto
 S.A.S.V/
-├── 📄 mapa_argentina_interactivo.py    # Aplicación principal
-├── 📄 requirements.txt                  # Dependencias de Python
-├── 📄 MUERTES_VIALES.csv               # Dataset de muertes viales
-├── 📄 README.md                        # Documentación del proyecto
-├── 📄 .gitignore                       # Configuración de Git
-├── 🚀 iniciar_aplicacion.bat           # Inicio automático (Windows)
-└── ⚡ iniciar_rapido.bat               # Inicio rápido (Windows)
-```
+│── app/
+│   ├── __init__".py
+│   ├── data_loader.py          <-- Carga y caché de datos.
+│   ├── mapa.py                 <-- Lógica para Folium (Mapas Interactivo y de Calor).
+│   ├── estadisticas.py         <-- Funciones para KPIs y gráficos por provincia.
+│   ├── comparativo.py          <-- Funciones para el análisis entre provincias.
+│   ├── graficos.py             <-- Funciones para análisis segmentado (Vehículos, Lugar, Modo).
+│   ├── registro.py             <-- Lógica del formulario de registro de nuevos incidentes.
+│   ├── utils.py
+│── main.py                     <-- Punto de entrada de la aplicación Streamlit.
+│── data/
+│   └── MUERTES_VIALES.csv      <-- El conjunto de datos fuente.
+│── requirements.txt            <-- Dependencias de Python.
 
-## 📝 Notas Técnicas
+🤝 Contribuciones
+Las contribuciones son bienvenidas para mejorar las funcionalidades, optimizar el código o añadir más análisis.
 
-- **Caché de datos**: Los datos se cargan una vez y se almacenan en caché
-- **Optimización**: Procesamiento eficiente de grandes volúmenes de datos
-- **Compatibilidad**: Funciona en Windows, macOS y Linux
+Fork el proyecto.
 
-## 🤝 Contribuciones
+Crea una rama para tu feature (git checkout -b feature/MiNuevaFuncionalidad).
 
-Las contribuciones son bienvenidas. Para contribuir:
+Commit tus cambios y abre un Pull Request.
 
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+📄 Licencia
+Este proyecto está bajo la Licencia MIT.
 
-## 📄 Licencia
+👨‍💻 Autors: 
+__________________
+FranM00l - GitHub |
+__________________|
+EF1507   - GitHUb |
+__________________|
 
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
-
-## 👨‍💻 Autor
-
-**FranM00l** - [GitHub](https://github.com/Fr4nM00l)
-
-## 🙏 Agradecimientos
-
-- Datos proporcionados por fuentes oficiales argentinas
-- Comunidad de Streamlit por el excelente framework
-- Contribuidores de las librerías utilizadas
-
----
-
-⭐ **¡Si te gusta este proyecto, dale una estrella en GitHub!**
-
-
+⭐ ¡Si te gusta este proyecto, dale una estrella en GitHub!
