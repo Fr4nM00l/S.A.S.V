@@ -1,4 +1,4 @@
-@echo off
+﻿@echo off
 chcp 65001 >nul
 title Mapa Interactivo Argentina - Muertes Viales
 
@@ -81,7 +81,7 @@ echo.
 
 echo ⏳ Iniciando Streamlit...
 echo.
-py -m streamlit run mapa_argentina_interactivo.py
+py -m streamlit run main.py
 
 echo.
 echo 👋 Aplicación cerrada

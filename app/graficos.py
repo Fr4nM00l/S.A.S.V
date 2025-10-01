@@ -1,10 +1,11 @@
-"""
+﻿"""
 Gráficos temáticos: tipo de lugar, vehículos (víctima/inculpado), modo de producción del hecho.
 """
 
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from folium.plugins import HeatMap
 
 def crear_graficos_tipo_lugar(df: pd.DataFrame):
     """Crear gráficos de tipo de lugar por provincia y total Argentina"""
@@ -221,6 +222,7 @@ def crear_graficos_inculpado_vehiculo(df: pd.DataFrame):
         fig_prov_torta.update_layout(height=500)
         st.plotly_chart(fig_prov_torta, use_container_width=True)
 
+
 def crear_graficos_modo_produccion_hecho(df: pd.DataFrame):
     """Crear gráficos de modo de producción del hecho con valores absolutos y porcentuales"""
     st.markdown("### 🚨 Análisis por Modo de Producción del Hecho")
@@ -350,3 +352,4 @@ def crear_graficos_modo_produccion_hecho(df: pd.DataFrame):
         file_name=f"modo_produccion_hecho_{provincia_seleccionada.replace(' ', '_')}.csv",
         mime="text/csv"
     )
+

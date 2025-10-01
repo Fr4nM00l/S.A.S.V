@@ -1,4 +1,4 @@
-"""
+﻿"""
 Punto de entrada de la app Streamlit.
 """
 
@@ -10,6 +10,7 @@ from app.mapa import crear_mapa_argentina_interactivo, crear_mapa_de_calor
 from app.estadisticas import mostrar_estadisticas_detalladas
 from app.comparativo import mostrar_analisis_comparativo
 from app.registro_nuevo_incidente import mostrar_formulario_registro
+from app.prediccion_ml import mostrar_interfaz_prediccion
 from app.graficos import (
     crear_graficos_tipo_lugar,
     crear_graficos_victima_vehiculo,
@@ -18,6 +19,15 @@ from app.graficos import (
 )
 from streamlit_folium import st_folium
 
+st.markdown("""
+<style>
+    div[data-baseweb="select"] li {
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+    }
+</style>
+""", unsafe_allow_html=True)
 
 # Configuración de la página
 st.set_page_config(
@@ -29,7 +39,7 @@ st.set_page_config(
 
 # Encabezado principal
 st.markdown("""
-<div style="text-align: center; padding: 20px; background: linear-gradient(90deg, ##0A497A, #167495); border-radius: 10px; margin-bottom: 20px;">
+<div style="text-align: center; padding: 20px; background: linear-gradient(90deg, #1f77b4, #ff7f0e); border-radius: 10px; margin-bottom: 20px;">
     <h1 style="color: white; margin: 0;">Sistema de Análisis de Siniestros Viales</h1>
     <h2 style="color: #FFD700; margin: 10px 0 0 0; font-size: 1.5em;">Análisis de Muertes Viales por Provincia</h2>
 </div>
@@ -57,19 +67,20 @@ def main():
     # --- INICIO DE MODIFICACIÓN: st.sidebar.selectbox cambiado a st.sidebar.radio ---
     
     # Menú principal - Usando Radio buttons para mostrar todas las opciones a la vista
-    opcion = st.sidebar.radio(
+    opcion = st.sidebar.selectbox(
         "Selecciona una opción de análisis:",
         [
-            "🗺️ Mapa Interactivo",
-            "🔥 Mapa de Calor",
+            "🗺️ Mapa Interactivo",          
             "📊 Estadísticas por Provincia",
+            "🔥 Mapa de Calor",
             "📈 Análisis Comparativo",
             "🔍 Explorador de Datos",
             "🛣️ Análisis por Tipo de Lugar",
             "🚗 Análisis por Vehículo de la Víctima",
             "🚙 Análisis por Vehículo del Inculpado",
             "🚨 Análisis por Modo de Producción del Hecho",
-            "➕ Registrar nuevo incidente"
+            "➕ Registrar nuevo incidente",
+            "🔮 Módulo de Predicción"
         ]
     )
     
@@ -95,7 +106,7 @@ def main():
         crear_mapa_de_calor(df)
 
     elif opcion == "📊 Estadísticas por Provincia":
-        st.markdown("### 📊 Estadísticas por Provincia")
+        
         provincias = sorted(df['provincia_nombre'].unique())
         provincia_seleccionada = st.selectbox(
             "Selecciona una provincia para ver estadísticas detalladas:",
@@ -104,12 +115,11 @@ def main():
         mostrar_estadisticas_detalladas(df, provincia_seleccionada)
 
     elif opcion == "📈 Análisis Comparativo":
-        st.markdown("### 📈 Análisis Comparativo entre Provincias")
+        
         mostrar_analisis_comparativo(df)
 
     elif opcion == "🔍 Explorador de Datos":
-        st.markdown("### 🔍 Explorador de Datos")
-        st.markdown("#### 🔧 Filtros de Búsqueda")
+        
         col1, col2 = st.columns(2)
 
         # Filtros
@@ -158,8 +168,11 @@ def main():
     elif opcion == "🚨 Análisis por Modo de Producción del Hecho":
         crear_graficos_modo_produccion_hecho(df)
     elif opcion == "➕ Registrar nuevo incidente":
-        st.markdown("### ➕ Registrar Nuevo Incidente")
+        
         mostrar_formulario_registro()
+    elif opcion == "🔮 Módulo de Predicción":
+        
+        mostrar_interfaz_prediccion(df)
 
 if __name__ == "__main__":
     main()

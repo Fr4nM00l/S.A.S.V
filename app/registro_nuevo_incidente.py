@@ -1,4 +1,4 @@
-"""
+﻿"""
 Funciones para gestionar el registro de nuevos incidentes viales.
 Se enfoca en la interfaz de Streamlit para la entrada de datos
 y la lógica para añadir el nuevo registro al archivo MUERTES_VIALES.csv.
@@ -10,12 +10,13 @@ from datetime import datetime
 import uuid
 import numpy as np
 from app.utils import coordenadas_provincias # <--- IMPORTACIÓN AÑADIDA
+from typing import Union
 
 # Ruta del archivo CSV de datos. Asume que el archivo está en la carpeta 'data' al mismo nivel que 'app'.
 DATA_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', 'MUERTES_VIALES.csv')
 DELIMITER = ';' # El CSV usa punto y coma como delimitador
 
-def cargar_datos_registro(path: str = DATA_PATH) -> pd.DataFrame | None:
+def cargar_datos_registro(path: str = DATA_PATH) -> Union[pd.DataFrame, None]:
     """Intenta cargar el DataFrame para obtener los valores únicos de los selectores."""
     if not os.path.exists(path): # Si no existe el archivo, no se puede cargar
         st.warning(f"Archivo de datos no encontrado en: {path}. El formulario usará opciones por defecto.")
