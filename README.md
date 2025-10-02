@@ -123,39 +123,4 @@ Vehículos: Desglose por victima_vehiculo y inculpado_vehiculo.
 Lugar y Modo: Distribución por tipo_lugar (Ruta, Calle) y modo_produccion_hecho (Colisión, Vuelco).
 
 
-📁 Estructura del Proyecto
-S.A.S.V/
-│── app/
-│   ├── __init__".py
-│   ├── data_loader.py          <-- Carga y caché de datos.
-│   ├── mapa.py                 <-- Lógica para Folium (Mapas Interactivo y de Calor).
-│   ├── estadisticas.py         <-- Funciones para KPIs y gráficos por provincia.
-│   ├── comparativo.py          <-- Funciones para el análisis entre provincias.
-│   ├── graficos.py             <-- Funciones para análisis segmentado (Vehículos, Lugar, Modo).
-│   ├── registro.py             <-- Lógica del formulario de registro de nuevos incidentes.
-│   ├── utils.py
-│── main.py                     <-- Punto de entrada de la aplicación Streamlit.
-│── data/
-│   └── MUERTES_VIALES.csv      <-- El conjunto de datos fuente.
-│── requirements.txt            <-- Dependencias de Python.
 
-🤝 Contribuciones
-Las contribuciones son bienvenidas para mejorar las funcionalidades, optimizar el código o añadir más análisis.
-
-Fork el proyecto.
-
-Crea una rama para tu feature (git checkout -b feature/MiNuevaFuncionalidad).
-
-Commit tus cambios y abre un Pull Request.
-
-📄 Licencia
-Este proyecto está bajo la Licencia MIT.
-
-👨‍💻 Autors: 
-__________________
-FranM00l - GitHub |
-__________________|
-EF1507   - GitHUb |
-__________________|
-
-⭐ ¡Si te gusta este proyecto, dale una estrella en GitHub!
