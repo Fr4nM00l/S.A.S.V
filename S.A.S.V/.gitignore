@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+# venv/  # Comentado para permitir que se cree automáticamente
+ENV/
+env.bak/
+venv.bak/
+
+# Visual Studio
+.vs/
+*.pyproj
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Streamlit
+.streamlit/
+
+# Datos temporales
+*.tmp
+*.log
+*.cache
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos de configuración local
+.env
+.env.local
+.env.production
+
+# Archivos de respaldo
+*.bak
+*.backup
+*~
+
+# Archivos de test y desarrollo
+test_*.py
+*_test.py
+corregir_rutas.py
+iniciar_mapa_*.py
+# INICIAR_MAPA.bat  # Comentado para incluir los nuevos archivos .bat
+
+# Documentación temporal
+CORRECCIONES_*.md
+INSTRUCCIONES_*.md
